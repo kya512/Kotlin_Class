@@ -19,12 +19,8 @@ class Personne {
         return IMC
     }
 
-    fun afficherImc() {
-        if (age >= 20 && age <= 65) {
-            println("L'Imc de Mme/Mr $nom ,pour $taille cm est de ${(poids / (taille * taille))} ")
-        } else {
-            println("indéterminable car l'age ne rentre pas dans les critères")
-        }
-    }
+    override fun toString(): String {
+        return "Personne(nom='$nom', taille=$taille, poids=$poids)"
+        }     
 }
 
